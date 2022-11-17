@@ -52,7 +52,7 @@ def scan_file(file: str):
                     is_error = False
                 elif len([x for x in m.strip() if x not in ("0","1","2","3","4","5","6","7","8","9","+","-","*","/",",")]) > 0:
                     is_error = True
-                    print(f"{file}: Error with line segment `{m}`, detected potential modulo with volatile variable b where the format of the modulo operator is a%b.")
+                    print(f"{file}: Error with line segment `{m.strip()}`, detected potential modulo with volatile variable b where the format of the modulo operator is a%b.")
                 else:
                     print(m)
 
