@@ -39,7 +39,7 @@ def scan_file(file: str):
                 error = ""
                 is_error = False
                 if len([x for x in m.strip() if x == "\""]) % 2:
-                    # Odd number of quotations, assume part of string
+                    # Odd number of quotations, assume part of printf format string
                     is_error = False
                 elif m.strip().isnumeric():
                     # Is base 10 number, skip
